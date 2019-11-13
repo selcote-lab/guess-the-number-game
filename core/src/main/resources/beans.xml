@@ -4,6 +4,6 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="numberGenerator" class="com.tonasolution.NumberGeneratedImpl"/>
+    <bean id="numberGenerator" class="com.tonasolution.NumberGeneratorImpl"/>
 
 </beans>

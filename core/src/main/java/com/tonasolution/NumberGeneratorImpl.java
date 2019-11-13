@@ -2,7 +2,7 @@ package com.tonasolution;
 
 import java.util.Random;
 
-public class NumberGeneratedImpl implements NumberGenerated {
+public class NumberGeneratorImpl implements NumberGenerator {
     // == fields ==
     private final Random random = new Random();
 

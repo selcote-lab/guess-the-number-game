@@ -1,6 +1,6 @@
 package com.tonasolution;
 
-public interface NumberGenerated {
+public interface NumberGenerator {
 
     int next();
 
