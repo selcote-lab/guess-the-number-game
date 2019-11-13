@@ -11,16 +11,17 @@ public class Main {
     private static final String CONFIG_LOCATION = "beans.xml";
 
     public static void main(String[] args) {
-        log.info("Very coool");
+        log.info("Very Cool");
 
         ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(CONFIG_LOCATION);
+
         NumberGenerator numberGenerator = context.getBean("numberGenerator", NumberGenerator.class);
-
         int number = numberGenerator.next();
-
         log.info("number = {} ", number );
 
-        context.close();
+        Game game = context.getBean(Game.class);
+        game.reset();
 
+        context.close();
     }
 }
