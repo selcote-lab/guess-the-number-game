@@ -5,8 +5,10 @@
            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="numberGenerator" class="com.tonasolution.NumberGeneratorImpl"/>
+
     <bean id="game" class="com.tonasolution.GameImpl">
-        <constructor-arg ref="numberGenerator"></constructor-arg>
+        <property name="numberGenerator" ref="numberGenerator" />
     </bean>
 
+<!--    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" />-->
 </beans>
