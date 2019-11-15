@@ -1,5 +1,9 @@
-package com.tonasolution;
+package com.tonasolution.console;
 
+import com.tonasolution.AppConfig;
+import com.tonasolution.Game;
+import com.tonasolution.MessageGenerator;
+import com.tonasolution.NumberGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
