@@ -3,9 +3,9 @@ package com.tonasolution;
 public interface Game {
     int getNumber();
 
-    int getGuess(int guess);
+    int getGuess();
 
-    int getSmallTest();
+    int getSmallest();
 
     int getBiggest();
 

@@ -49,12 +49,12 @@ public class GameImpl implements Game {
     }
 
     @Override
-    public int getGuess(int guess) {
+    public int getGuess() {
         return guess;
     }
 
     @Override
-    public int getSmallTest() {
+    public int getSmallest() {
         return smallest;
     }
 
