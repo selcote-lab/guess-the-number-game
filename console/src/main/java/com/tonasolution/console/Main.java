@@ -1,32 +1,22 @@
 package com.tonasolution.console;
 
-import com.tonasolution.config.AppConfig;
-import com.tonasolution.Game;
-import com.tonasolution.MessageGenerator;
-import com.tonasolution.NumberGenerator;
+import com.tonasolution.config.GameConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
+@Configuration
+@Import(GameConfig.class)
 public class Main {
     private static final Logger log = LoggerFactory.getLogger(Main.class);
 
     public static void main(String[] args) {
-        log.info("Very Cool");
+        log.info("Guess The number Game");
 
-        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
-
-        NumberGenerator numberGenerator = context.getBean(NumberGenerator.class);
-        int number = numberGenerator.next();
-        log.info("number = {} ", number );
-
-        Game game = context.getBean(Game.class);
-        game.reset();
-
-        MessageGenerator messageGenerator = context.getBean(MessageGenerator.class);
-        log.info("getMainMessage = {} ",  messageGenerator.getMainMessage());
-        log.info("getResultMessage() = {} ", messageGenerator.getResultMessage());
+        ConfigurableApplicationContext context = new AnnotationConfigApplicationContext(GameConfig.class);
 
         context.close();
     }
