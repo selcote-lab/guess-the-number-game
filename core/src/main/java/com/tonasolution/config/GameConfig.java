@@ -2,15 +2,25 @@ package com.tonasolution.config;
 
 import com.tonasolution.GuessCount;
 import com.tonasolution.MaxNumber;
+import com.tonasolution.MinNumber;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 @Configuration
+@PropertySource("classpath:config/game.properties")
 public class GameConfig {
 
     //== fields ==
-    private int maxNumber = 25;
-    private int guessCount = 8;
+    @Value("${game.maxNumber:20}")
+    private int maxNumber;
+
+    @Value("${game.guessCount:5}")
+    private int guessCount;
+
+    @Value("${game.minNumber:2}")
+    private int minNumber;
 
     // == bean methods ==
     @Bean
@@ -23,5 +33,11 @@ public class GameConfig {
     @GuessCount
     public int guessCount() {
         return guessCount;
+    }
+
+    @Bean
+    @MinNumber
+    public int minNumber() {
+        return minNumber;
     }
 }
