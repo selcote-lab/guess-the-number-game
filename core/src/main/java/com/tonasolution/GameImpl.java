@@ -15,8 +15,9 @@ public class GameImpl implements Game {
     private static final Logger log = LoggerFactory.getLogger(GameImpl.class);
 
     // == fields ==
-    private NumberGenerator numberGenerator;
-    private int guessCount;
+    private final NumberGenerator numberGenerator;
+    private final int guessCount;
+
     private int number;
     private int guess;
     private int smallest;
@@ -25,7 +26,6 @@ public class GameImpl implements Game {
     private boolean validNumberRange = true;
 
     // == constructors ==
-    @Autowired
     public GameImpl(NumberGenerator numberGenerator, @GuessCount int guessCount) {
         this.numberGenerator = numberGenerator;
         this.guessCount = guessCount;
