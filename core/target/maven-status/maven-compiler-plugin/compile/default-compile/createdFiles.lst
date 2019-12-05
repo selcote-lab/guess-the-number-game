@@ -1,0 +1,10 @@
+com\tonasolution\config\GameConfig.class
+com\tonasolution\MinNumber.class
+com\tonasolution\Game.class
+com\tonasolution\GameImpl.class
+com\tonasolution\NumberGeneratorImpl.class
+com\tonasolution\MaxNumber.class
+com\tonasolution\MessageGenerator.class
+com\tonasolution\GuessCount.class
+com\tonasolution\MessageGeneratorImpl.class
+com\tonasolution\NumberGenerator.class
